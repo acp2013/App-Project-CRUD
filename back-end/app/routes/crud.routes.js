@@ -12,9 +12,74 @@ module.exports = function(app) {
 
   app.get(
     "/api/crud/all",
-    [authJwt.verifyToken, authJwt.isModerator],
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
     controller.publicContent
   );
 
+  app.post(
+    "/api/crud",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.create
+  );
+
+  app.get(
+    "/api/crud",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.findAll
+  );
+
+  app.get(
+    "/api/crud/published",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.findAllPublished
+  );
+
+  app.get(
+    "/api/crud/:id",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.findOne
+  );
+
+  app.put(
+    "/api/crud/:id",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.update
+  );
+
+  app.delete(
+    "/api/crud/:id",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.delete
+  );
+
+  app.delete(
+    "/api/crud",
+    [
+        authJwt.verifyToken, 
+        authJwt.isModerator
+    ],
+    controller.deleteAll
+  );
   
 };
