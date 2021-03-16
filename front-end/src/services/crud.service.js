@@ -12,7 +12,7 @@ const getAll = () => {
 };
 
 const get = id => {
-  return axios.get(API_URL + `/crud/${id}` ,  { headers: authHeader() });
+  return axios.get(API_URL + `crud/${id}` ,  { headers: authHeader() });
 };
 
 const create = data => {
@@ -20,11 +20,11 @@ const create = data => {
 };
 
 const update = (id, data) => {
-  return axios.put(API_URL + `/crud/${id}` , data ,  { headers: authHeader() });
+  return axios.put(API_URL + `crud/${id}` , data ,  { headers: authHeader() });
 };
 
 const remove = id => {
-  return axios.delete(API_URL + `/crud/${id}` ,  { headers: authHeader() });
+  return axios.delete(API_URL + `crud/${id}` ,  { headers: authHeader() });
 };
 
 const removeAll = () => {
@@ -32,7 +32,7 @@ const removeAll = () => {
 };
 
 const findByTitle = title => {
-  return axios.get(API_URL + `/crud/${title}` ,  { headers: authHeader() });
+  return axios.get(API_URL + `crud?title=${title}` ,  { headers: authHeader() });
 };
 
 export default {

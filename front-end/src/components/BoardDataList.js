@@ -132,7 +132,7 @@ const BoardDataList = () => {
             </div>
 
             <Link
-              to={"/Data/" + currentData.id}
+              to={"/crud/" + currentData.id}
               className="badge badge-warning"
             >
               Edit
