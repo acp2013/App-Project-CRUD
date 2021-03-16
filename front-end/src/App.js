@@ -12,12 +12,16 @@ import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
+import BoardAddData from "./components/BoardAddData";
+import BoardDataList from "./components/BoardDataList";
+import BoardData from "./components/BoardData";
+
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
-import BoardCrud from "./components/BoardCrud";
+// import BoardCrud from "./components/BoardCrud";
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -129,7 +133,9 @@ const App = () => {
             <Route path="/user" component={BoardUser} />
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={BoardAdmin} />
-            <Route path="/crud" component={BoardCrud} />
+            <Route path="/crud" component={BoardDataList} />
+            <Route path="/add" component={BoardAddData} />
+            <Route path="/crud/:id" component={BoardData} />
           </Switch>
         </div>
       </div>
