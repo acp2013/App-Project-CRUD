@@ -15,7 +15,7 @@ import BoardAdmin from "./components/BoardAdmin";
 import BoardAddData from "./components/BoardAddData";
 import BoardDataList from "./components/BoardDataList";
 import BoardData from "./components/BoardData";
-
+import BoardTable from "./components/BoardTable";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
@@ -135,6 +135,7 @@ const App = () => {
             <Route path="/admin" component={BoardAdmin} />
             <Route path="/crud" component={BoardDataList} />
             <Route path="/add" component={BoardAddData} />
+            <Route path="/List" component={BoardTable} />
             <Route path="/crud/:id" component={BoardData} />
           </Switch>
         </div>

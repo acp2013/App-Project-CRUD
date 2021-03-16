@@ -85,7 +85,7 @@ const BoardDataList = () => {
       </div>
       <div className="col-md-6">
         <h4>Data List</h4>
-
+        
         <ul className="list-group">
           {Data &&
             Data.map((Data, index) => (
@@ -101,12 +101,9 @@ const BoardDataList = () => {
             ))}
         </ul>
 
-        <button
-          className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllData}
-        >
-          Remove All
-        </button>
+        <a class="btn btn-sm btn-primary" href="/add" role="button">Entry Data</a>
+        <a class="m-2 btn btn-sm btn-danger" href={removeAllData} role="button">Remove All</a>
+
       </div>
       <div className="col-md-6">
         {currentData ? (
